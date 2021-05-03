@@ -24,7 +24,7 @@ spec:
           - "/bin/k3s"
         args:
           - "server"
-          - "--write-kubeconfig=/k3s-config/kube-config.yaml"
+          - "--write-kubeconfig=/vcluster-blue/kube-config.yaml"
           - "--data-dir=/data"
           - "--disable=traefik,servicelb,metrics-server,local-storage"
           - "--disable-network-policy"

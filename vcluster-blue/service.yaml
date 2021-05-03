@@ -3,10 +3,11 @@ kind: Service
 metadata:
   name: vcluster-blue
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
     - name: https
       port: 443
+      nodePort: 30588
       targetPort: 8443
       protocol: TCP
   selector:

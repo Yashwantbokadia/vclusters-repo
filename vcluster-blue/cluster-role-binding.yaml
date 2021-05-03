@@ -1,0 +1,17 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: vcluster-blue-crb
+  labels:
+    app: vcluster
+    chart: "vcluster-0.0.1"
+    release: "vcluster-blue"
+    heritage: "Helm"
+subjects:
+  - kind: ServiceAccount
+    name: vcluster-blue
+    namespace: default
+roleRef:
+  kind: ClusterRole
+  name: vcluster-blue-cr
+  apiGroup: rbac.authorization.k8s.io

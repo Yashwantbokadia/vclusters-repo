@@ -1,14 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    service.beta.kubernetes.io/do-loadbalancer-certificate-id: "8fa635e6-5ce3-488f-b4af-b27e22c1b26c"
   name: vcluster-red
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 80
     - name: https
       port: 443
-      nodePort: 30587
-      targetPort: 8443
       protocol: TCP
+      targetPort: 443
   selector:
     app: vcluster-red

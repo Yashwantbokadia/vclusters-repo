@@ -24,7 +24,7 @@ spec:
           - "/bin/k3s"
         args:
           - "server"
-          - "--tls-san=10.244.0.10"
+          - "--server=https://cluster-red.smartcloudlearner.in"
           - "--write-kubeconfig=/vcluster-red/kube-config.yaml"
           - "--data-dir=/data"
           - "--disable=traefik,servicelb,metrics-server,local-storage"

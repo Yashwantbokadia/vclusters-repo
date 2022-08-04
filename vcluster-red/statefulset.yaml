@@ -38,7 +38,7 @@ spec:
           - mountPath: /data
             name: data
       - name: syncer
-        image: "loftsh/virtual-cluster:0.0.27"
+        image: "loftsh/virtual-cluster:0.0.28"
         args:
           - --service-name=vcluster-red
           - --suffix=vcluster-red

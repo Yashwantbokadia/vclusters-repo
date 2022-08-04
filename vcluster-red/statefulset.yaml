@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 10
       serviceAccountName: vcluster-red
       containers:
-      - image: rancher/k3s:v1.19.5-k3s2
+      - image: rancher/k3s:v1.23.9+k3s1
         name: virtual-cluster
         command:
           - "/bin/k3s"

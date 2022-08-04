@@ -24,6 +24,8 @@ spec:
           - "/bin/k3s"
         args:
           - "server"
+          - "--tls-san=10.43.0.10"
+          - "--cluster-dns=10.43.0.10"
           - "--cluster-domain=cluster-red.smartcloudlearner.in"
           - "--write-kubeconfig=/vcluster-red/kube-config.yaml"
           - "--data-dir=/data"

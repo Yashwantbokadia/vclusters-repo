@@ -23,7 +23,7 @@ spec:
         command:
           - "/bin/k3s"
         args:
-          - "server"
+          - "server --tls-san=10.244.0.10"
           - "--write-kubeconfig=/vcluster-red/kube-config.yaml"
           - "--data-dir=/data"
           - "--disable=traefik,servicelb,metrics-server,local-storage"
